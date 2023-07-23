@@ -1,0 +1,5 @@
+IP: 158.160.70.56;
+name_taski: https://taskidisp.bounceme.net/;
+name_kittygram: https://kittydisp.bounceme.net/;
+login: meveladron;
+password: u83vq4v0wb15; 
