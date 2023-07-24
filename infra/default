@@ -1,14 +1,10 @@
 server {
     server_name 158.160.70.56 taskidisp.bounceme.net;
+    server_tokens off;
 
-
-    location /api/ {
-        proxy_pass http://127.0.0.1:8000;
-    }
-
-    location /admin/ {
-        proxy_pass http://127.0.0.1:8000;
-    }
+    location ~* ^/(api|admin)/ { 
+        proxy_pass http://127.0.0.1:8000; 
+    } 
 
     location / {
         root   /var/www/taski;
@@ -41,12 +37,8 @@ server {
 server {
     server_name 158.160.70.56 kittydisp.bounceme.net;
 
-    location /api/ {
-        proxy_pass http://127.0.0.1:8080;
-    }
-
-    location /admin/ {
-        proxy_pass http://127.0.0.1:8080;
+    location ~* ^/(api|admin)/ { 
+        proxy_pass http://127.0.0.1:8080; 
     }
 
     location /media/ {
